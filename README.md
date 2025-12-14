@@ -11,6 +11,13 @@ Netfix gpt
    a. Netflix logo in header
    b. netflix background image
    c. basic form for sign in and sign up
+   d. form validations, useRef hook for inputs
+9. Set up firebase
+   a. create new project
+   b. install and deploy firebase -> https://netflixgpt-60289.web.app
+10. Used firebase fn to sign in and sign up
+11. Created redux store to have user informationuser details and if user is not sign in then navigate it back
+12. In header add
 
 Features
 
