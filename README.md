@@ -17,7 +17,11 @@ Netfix gpt
    b. install and deploy firebase -> https://netflixgpt-60289.web.app
 10. Used firebase fn to sign in and sign up
 11. Created redux store to have user informationuser details and if user is not sign in then navigate it back
-12. In header add
+12. In header add user logo and sign out option
+13. Get data from tmbd website -> https://www.themoviedb.org/settings/api
+14. Now in body componenet add header, main container and secondary container
+15. Add the main movie with trailer playing
+16.
 
 Features
 
