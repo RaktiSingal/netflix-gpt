@@ -21,7 +21,7 @@ Netfix gpt
 13. Get data from tmbd website -> https://www.themoviedb.org/settings/api
 14. Now in body componenet add header, main container and secondary container
 15. Add the main movie with trailer playing
-16.
+16. Build secondary component -> movies categories -> movie cards
 
 Features
 
