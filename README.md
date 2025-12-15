@@ -22,6 +22,9 @@ Netfix gpt
 14. Now in body componenet add header, main container and secondary container
 15. Add the main movie with trailer playing
 16. Build secondary component -> movies categories -> movie cards
+17. GPT Search option -> GPT search bar and suggestions
+18. npm i openai
+19. setup chat gpt
 
 Features
 

@@ -6,6 +6,8 @@ export const API_OPTIONS = {
   }
 };
 
+export const BACKGROUND_URL = 'https://assets.nflxext.com/ffe/siteui/vlv3/c81956f1-5750-454c-9b3c-7a4d990d3d06/web/IN-en-20251208-TRIFECTA-perspective_d69f5f82-9a35-45d7-a7b6-9af6e0643bf5_large.jpg';
+
 export const NOW_PLAYING_URL = 'https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1';
 
 export const POPULAR_URL = 'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1';
