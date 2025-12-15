@@ -24,7 +24,7 @@ const Login = () => {
   const fullName = useRef(null);
 
   const handleSaveButton = () => {
-    //validate input
+    console.log('sign in clicked');
     const checkEmail = checkValidEmail(email.current.value);
     const checkPass = checkValidPassword(password.current.value);
     setEmailError(checkEmail);
@@ -73,6 +73,7 @@ const Login = () => {
         });
     }
 
+    console.log('signing in user');
     signInWithEmailAndPassword(
       auth,
       email.current.value,
