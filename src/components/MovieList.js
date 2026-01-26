@@ -1,7 +1,7 @@
 import React from 'react';
 import MovieCard from './MovieCard';
 
-const MovieList = ({movies, title}) => {
+const MovieList = ({ movies, title }) => {
     return (
         <div className="mb-10">
             <div className="text-white text-2xl pb-5">{title}</div>
@@ -9,7 +9,7 @@ const MovieList = ({movies, title}) => {
                 <div className="flex gap-5">
                     {movies?.map((movie) => {
                         return (
-                            <MovieCard movie={movie} key={movie.id}/>
+                            <MovieCard movie={movie} key={movie.id} />
                         );
                     })}
                 </div>

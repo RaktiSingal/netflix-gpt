@@ -1,9 +1,9 @@
-import {useEffect} from 'react'
+import { useEffect } from 'react'
 import { auth } from '../utils/firebase';
 import { signOut } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import {setUserData} from '../utils/UserSlice';
+import { setUserData } from '../utils/UserSlice';
 import { onAuthStateChanged } from "firebase/auth";
 import { toggleGpt } from '../utils/GptSlice';
 
@@ -33,10 +33,14 @@ const Header = () => {
     dispatch(toggleGpt());
   }
 
+  const accordian = () => {
+    navigate('/accordian');
+  }
+
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        dispatch(setUserData({uid: user.uid, displayName: user.displayName, email: user.email}));
+        dispatch(setUserData({ uid: user.uid, displayName: user.displayName, email: user.email }));
         if (gptSearchEnabled) {
           navigate('/gpt-search');
         } else {
@@ -59,6 +63,36 @@ const Header = () => {
         src='https://help.nflxext.com/helpcenter/OneTrust/oneTrust_production_2025-12-03/consent/87b6a5c0-0104-4e96-a291-092c11350111/019ae4b5-d8fb-7693-90ba-7a61d24a8837/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png'
       />
       {!!userDetails && (<div className="flex justify-center items-center gap-2">
+        <button
+          className="text-white bg-purple-700 p-1 rounded-md h-9 pl-4 pr-4"
+          onClick={() => accordian()}
+        >
+          {'Accordian'}
+        </button>
+        <button
+          className="text-white bg-purple-700 p-1 rounded-md h-9 pl-4 pr-4"
+          onClick={() => navigate('/nested-comments')}
+        >
+          Nested Comments
+        </button>
+        <button
+          className="text-white bg-purple-700 p-1 rounded-md h-9 pl-4 pr-4"
+          onClick={() => navigate('/image-slider')}
+        >
+          Image Slider
+        </button>
+        <button
+          className="text-white bg-purple-700 p-1 rounded-md h-9 pl-4 pr-4"
+          onClick={() => navigate('/youtube-chat')}
+        >
+          Youtube chat
+        </button>
+        <button
+          className="text-white bg-purple-700 p-1 rounded-md h-9 pl-4 pr-4"
+          onClick={() => navigate('/autocomplete-search')}
+        >
+          AutocompleteSearch
+        </button>
         <button
           className="text-white bg-purple-700 p-1 rounded-md h-9 pl-4 pr-4"
           onClick={() => searchGPT()}

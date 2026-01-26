@@ -7,6 +7,7 @@ import useTopRatedMovies from '../hooks/useTopRatedMovies';
 import useUpcomingMovies from '../hooks/useUpcomingMovies';
 import { useSelector } from 'react-redux';
 import GPTSearch from './GPTSearch';
+import { useEffect } from 'react';
 
 const Browse = () => {
   const gptSearchEnabled = useSelector((store) => store.gptSearch.gptSearch);
@@ -15,6 +16,20 @@ const Browse = () => {
   usePopularMovies();
   useTopRatedMovies();
   useUpcomingMovies();
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  });
+
+  const handleScroll = () => {
+    if (window.scrollY + window.innerHeight >= document.body.scrollHeight) {
+      console.log('infinite scroll')
+    }
+  }
 
   return (
     <div>
